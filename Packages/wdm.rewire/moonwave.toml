@@ -1,0 +1,16 @@
+title = "Rewire"
+gitRepoUrl = "http://blm.plus/roblox/wdm.rewire"
+
+
+[docusaurus]
+onBrokenLinks = "warn"
+onBrokenMarkdownLinks = "warn"
+
+[[footer.links]]
+title = "Links"
+
+[[footer.links.items]]
+label = "白龙马技术部"
+href = "https://kdz8swqlnv.feishu.cn/wiki/space/7298935307083448322?ccm_open_type=lark_wiki_spaceLink&open_tab_from=wiki_home"
+
+

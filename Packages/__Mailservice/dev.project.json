@@ -1,0 +1,28 @@
+{
+    "servePort": 34873,
+    "name": "MailService",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Packages": {
+                "$className": "Folder",
+                "MailService": {
+                    "$path": "src"
+                }
+            },
+            "UIAssets":{
+                "$className": "Folder",
+                "Mail": {
+                    "$path": "src_assets"
+                }
+            },
+            "UIPackages":{
+                "$className": "Folder",
+                "Mail": {
+                    "$path": "src_ui"
+                }
+            }
+        }
+    }
+}

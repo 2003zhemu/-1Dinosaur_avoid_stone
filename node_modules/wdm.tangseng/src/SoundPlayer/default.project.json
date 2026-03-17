@@ -1,0 +1,6 @@
+{
+    "name": "SoundPlayer",
+    "tree": {
+        "$path": "src"
+    }
+}

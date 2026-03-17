@@ -1,0 +1,1040 @@
+[
+  {
+    "Id": "100K速度",
+    "Name": "/Vendor/100K速度",
+    "Tags": [
+      "经验"
+    ],
+    "Group": "买速度",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "PropertyProduct",
+          "Component": {
+            "Location": {
+              "Path": "/属性"
+            },
+            "Id": "经验",
+            "Count": {
+              "$type": "CfgLiteralValue",
+              "Value": 100000
+            }
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "1M速度",
+    "Name": "/Vendor/1M速度",
+    "Tags": [
+      "经验"
+    ],
+    "Group": "买速度",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "PropertyProduct",
+          "Component": {
+            "Location": {
+              "Path": "/属性"
+            },
+            "Id": "经验",
+            "Count": {
+              "$type": "CfgLiteralValue",
+              "Value": 1000000
+            }
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "10M速度",
+    "Name": "/Vendor/10M速度",
+    "Tags": [
+      "经验"
+    ],
+    "Group": "买速度",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "PropertyProduct",
+          "Component": {
+            "Location": {
+              "Path": "/属性"
+            },
+            "Id": "经验",
+            "Count": {
+              "$type": "CfgLiteralValue",
+              "Value": 10000000
+            }
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "100M速度",
+    "Name": "/Vendor/100M速度",
+    "Tags": [
+      "经验"
+    ],
+    "Group": "买速度",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "PropertyProduct",
+          "Component": {
+            "Location": {
+              "Path": "/属性"
+            },
+            "Id": "经验",
+            "Count": {
+              "$type": "CfgLiteralValue",
+              "Value": 100000000
+            }
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "复活",
+    "Name": "/Vendor/复活",
+    "Tags": [
+      "买功能"
+    ],
+    "Group": "买功能",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "AnyProduct",
+          "Component": {
+            "$type": "ExecuteLuaComponent",
+            "ModulePath": "ReplicatedStorage.WuKongExtension",
+            "FunctionName": "Respawn",
+            "Args": [],
+            "ElementInfos": []
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "跳过重生1",
+    "Name": "/Vendor/跳过重生1",
+    "Tags": [
+      "买功能"
+    ],
+    "Group": "买功能",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "PropertyProduct",
+          "Component": {
+            "Location": {
+              "Path": "/属性"
+            },
+            "Id": "重生次数",
+            "Count": {
+              "$type": "CfgLiteralValue",
+              "Value": 1
+            }
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "跳过重生2",
+    "Name": "/Vendor/跳过重生2",
+    "Tags": [
+      "买功能"
+    ],
+    "Group": "买功能",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "PropertyProduct",
+          "Component": {
+            "Location": {
+              "Path": "/属性"
+            },
+            "Id": "重生次数",
+            "Count": {
+              "$type": "CfgLiteralValue",
+              "Value": 1
+            }
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "跳过重生3",
+    "Name": "/Vendor/跳过重生3",
+    "Tags": [
+      "买功能"
+    ],
+    "Group": "买功能",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "PropertyProduct",
+          "Component": {
+            "Location": {
+              "Path": "/属性"
+            },
+            "Id": "重生次数",
+            "Count": {
+              "$type": "CfgLiteralValue",
+              "Value": 1
+            }
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "特性12",
+    "Name": "/Vendor/特性12",
+    "Tags": [
+      "买功能"
+    ],
+    "Group": "买功能",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "AnyProduct",
+          "Component": {
+            "$type": "ExecuteLuaComponent",
+            "ModulePath": "ReplicatedStorage.WuKongExtension",
+            "FunctionName": "AuraByRobux",
+            "Args": [
+              {
+                "$type": "CfgLiteralValue",
+                "Value": 12
+              }
+            ],
+            "ElementInfos": []
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "新手礼包",
+    "Name": "/Vendor/新手礼包",
+    "Tags": [
+      "通行证"
+    ],
+    "Group": "通行证",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "PropertyProduct",
+          "Component": {
+            "Location": {
+              "Path": "/属性"
+            },
+            "Id": "经验",
+            "Count": {
+              "$type": "CfgLiteralValue",
+              "Value": 50000
+            }
+          }
+        }
+      },
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "PropertyProduct",
+          "Component": {
+            "Location": {
+              "Path": "/货币"
+            },
+            "Id": "奖杯",
+            "Count": {
+              "$type": "CfgLiteralValue",
+              "Value": 3000
+            }
+          }
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "双倍速度",
+    "Name": "/Vendor/双倍速度",
+    "Tags": [
+      "通行证"
+    ],
+    "Group": "通行证",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "双倍奖杯",
+    "Name": "/Vendor/双倍奖杯",
+    "Tags": [
+      "通行证"
+    ],
+    "Group": "通行证",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "三倍跑步机",
+    "Name": "/Vendor/三倍跑步机",
+    "Tags": [
+      "通行证"
+    ],
+    "Group": "通行证",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "九倍跑步机",
+    "Name": "/Vendor/九倍跑步机",
+    "Tags": [
+      "通行证"
+    ],
+    "Group": "通行证",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "25倍跑步机",
+    "Name": "/Vendor/25倍跑步机",
+    "Tags": [
+      "通行证"
+    ],
+    "Group": "通行证",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "付费恐龙",
+    "Name": "/Vendor/付费恐龙",
+    "Tags": [
+      "通行证"
+    ],
+    "Group": "通行证",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgRobloxDeveloperProductCost"
+        }
+      }
+    ],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "领取每日登录奖励",
+    "Name": "领取每日登录奖励",
+    "Tags": [],
+    "Group": "每日登录奖励",
+    "Plugins": [
+      {
+        "$type": "Container.CfgDailyTaskPlugin",
+        "Hour": {
+          "$type": "CfgLiteralValue",
+          "Value": 0
+        },
+        "Action": {
+          "Location": {
+            "Path": "/货币/金币?属性增加"
+          },
+          "Args": [
+            "0"
+          ]
+        }
+      }
+    ],
+    "Logics": [],
+    "Costs": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgChancesByDaysCost",
+          "Days": 1,
+          "Chances": 1
+        }
+      }
+    ],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgProgressProduct",
+          "ProgressQuery": {
+            "Location": {
+              "Path": "?获取已购买次数"
+            },
+            "Args": []
+          },
+          "Members": [
+            {
+              "Progress": 0,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 5000
+                }
+              }
+            },
+            {
+              "Progress": 1,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/货币"
+                },
+                "Id": "奖杯",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 50
+                }
+              }
+            },
+            {
+              "Progress": 2,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 100000
+                }
+              }
+            },
+            {
+              "Progress": 3,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 500000
+                }
+              }
+            },
+            {
+              "Progress": 4,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/货币"
+                },
+                "Id": "奖杯",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 500
+                }
+              }
+            },
+            {
+              "Progress": 5,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 1500000
+                }
+              }
+            },
+            {
+              "Progress": 6,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/货币"
+                },
+                "Id": "奖杯",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 10000
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "群组每日奖励",
+    "Name": "群组每日奖励",
+    "Tags": [],
+    "Group": "群组奖励",
+    "Plugins": [
+      {
+        "$type": "Vender.CfgVendorHooks",
+        "ModulePath": "ReplicatedStorage.WuKongHooks.LikeReward"
+      }
+    ],
+    "Logics": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgComparerLogic",
+          "Query": {
+            "Location": {
+              "Path": "/活动/群组奖励/群组每日奖励?获取已购买次数"
+            },
+            "Args": []
+          },
+          "Comparer": 5,
+          "Value": 0
+        }
+      }
+    ],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "在线时长奖励1",
+    "Name": "在线时长奖励1",
+    "Tags": [],
+    "Group": "在线时长奖励",
+    "Plugins": [
+      {
+        "$type": "Container.CfgDailyTaskPlugin",
+        "Hour": {
+          "$type": "CfgConstValue",
+          "Key": "在线时长奖励"
+        },
+        "Action": {
+          "Location": {
+            "Path": "?重置"
+          },
+          "Args": []
+        }
+      }
+    ],
+    "Logics": [],
+    "Costs": [],
+    "Products": [
+      {
+        "Key": {
+          "Id": "{}",
+          "Description": []
+        },
+        "Value": {
+          "$type": "CfgProgressProduct",
+          "ProgressQuery": {
+            "Location": {
+              "Path": "/数据/在线时长?本日累计激活秒数"
+            },
+            "Args": []
+          },
+          "Members": [
+            {
+              "Progress": 120,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 1000
+                }
+              }
+            },
+            {
+              "Progress": 300,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 2000
+                }
+              }
+            },
+            {
+              "Progress": 480,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/货币"
+                },
+                "Id": "奖杯",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 20
+                }
+              }
+            },
+            {
+              "Progress": 600,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 5000
+                }
+              }
+            },
+            {
+              "Progress": 720,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 10000
+                }
+              }
+            },
+            {
+              "Progress": 900,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 15000
+                }
+              }
+            },
+            {
+              "Progress": 1080,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 20000
+                }
+              }
+            },
+            {
+              "Progress": 1200,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/货币"
+                },
+                "Id": "奖杯",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 100
+                }
+              }
+            },
+            {
+              "Progress": 1328,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 50000
+                }
+              }
+            },
+            {
+              "Progress": 1500,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/货币"
+                },
+                "Id": "奖杯",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 250
+                }
+              }
+            },
+            {
+              "Progress": 1680,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/属性"
+                },
+                "Id": "经验",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 100000
+                }
+              }
+            },
+            {
+              "Progress": 1800,
+              "Logics": [],
+              "Component": {
+                "$type": "PropertyComponent",
+                "Location": {
+                  "Path": "/货币"
+                },
+                "Id": "奖杯",
+                "Count": {
+                  "$type": "CfgLiteralValue",
+                  "Value": 500
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "PostActions": []
+  },
+  {
+    "Id": "抽取转盘奖励",
+    "Name": "抽取转盘奖励",
+    "Tags": [],
+    "Group": "转盘奖励",
+    "Plugins": [
+      {
+        "$type": "Vender.CfgVendorHooks",
+        "ModulePath": "ReplicatedStorage.WuKongHooks.SpinReward"
+      },
+      {
+        "$type": "Container.CfgScheduleTaskPlugin",
+        "Start": {
+          "$type": "CfgLiteralValue",
+          "Value": 1722384000
+        },
+        "Interval": {
+          "$type": "CfgLiteralValue",
+          "Value": 14400
+        },
+        "Action": {
+          "Location": {
+            "Path": "?重置购买次数"
+          },
+          "Args": []
+        }
+      }
+    ],
+    "Logics": [],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  }
+]

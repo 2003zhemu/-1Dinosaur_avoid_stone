@@ -1,0 +1,40 @@
+{
+  "name": "ecs_battle_framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "file-sync": "wdt-file-sync",
+    "postinstall": "npm run file-sync",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rojo": "rojo serve ",
+    "rojo:beta_a": "rojo serve beta_a.lobby.project.json",
+    "config:build": "luban -t all  -x tableImporter.name=wukong  --conf configs/luban.conf -d json -d lua  -x lua.outputDataDir=build/wukongLuaConfigs -x json.outputDataDir=configs/tables",
+    "config:watch": "npm run config:build -- -w .\\configs",
+    "spriter": "node ./node_modules/spriter/scripts/sprite-generator.js",
+    "build:release_config": "npm run config:build && rmdir /s /q _genConfigs_relased && rename _genConfigs _genConfigs_relased"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@white-dragon-utils/luban": "^3.9.9",
+    "@white-dragon/tangseng": "^0.3.12",
+    "@white-dragon/wukong": "^0.1.10",
+    "ecs_battle_framework": "file:",
+    "spriter": "^1.0.9",
+    "wdm.audiomanager": "^0.3.0",
+    "wdm.awardinviteservice": "^0.0.11",
+    "wdm.cloud-upstash": "^0.0.2",
+    "wdm.codeservice": "^0.1.10",
+    "wdm.config-provider": "^0.6.2",
+    "wdm.crossservermessage": "^0.1.1",
+    "wdm.gameanalytics": "^2.2.4",
+    "wdm.ingamefriendservice": "^0.1.4",
+    "wdm.mailservice": "^0.1.3",
+    "wdm.neza": "2.2.14",
+    "wdm.tangseng": "^0.2.0",
+    "wdm.testez": "^0.4.8",
+    "wdt.file-sync": "^0.0.7"
+  }
+}

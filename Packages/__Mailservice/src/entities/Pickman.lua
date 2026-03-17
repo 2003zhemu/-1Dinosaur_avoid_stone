@@ -1,0 +1,127 @@
+local SETTING = require(script.Parent.Parent.SETTING)
+
+local Players = game:GetService("Players")
+local PlayerMailsStore = require(script.Parent.Parent.datastores.PlayerMailsStore)
+local DomainMailsStore = require(script.Parent.Parent.datastores.DomainMailsStore)
+local PlayerDataProvider = require(script.Parent.Parent.PlayerDataProvider)
+local Mail = require(script.Parent.Mail)
+
+local module = {}
+module.__index = module
+
+export type Type = {
+    Mails: {Mail.Type},             -- 收取的邮件
+    HandleOver: boolean            -- 是否处理完毕
+}
+
+function module.new()
+    local self = {
+        Mails = {},
+    }
+    setmetatable(self, module)
+    self:AutoHandle()
+    return self
+end
+
+-- #region 邮件接收
+function module:AutoHandle()
+    local function handMails()
+        for _, mail in ipairs(self.Mails) do
+            local suc, res = pcall(self.Pick, self, mail)
+            if suc then
+                local idx = nil
+                for i, v in ipairs(self.Mails) do
+                    if v.Id == mail.Id then
+                        idx = i
+                        break
+                    end
+                end
+                if idx then
+                    table.remove(self.Mails, idx)
+                end
+            else
+                warn(res)
+            end
+        end
+    end
+    coroutine.wrap(function()
+        while true do
+            self.HandleOver = false
+            -- 处理邮件
+            handMails()
+            if #self.Mails == 0 then
+                self.HandleOver = true
+            end
+            wait(60)
+        end
+    end)()
+end
+
+-- 邮件入库
+function module:Pick(mail: Mail.Type)
+    local expiry = mail.Expiry
+    if expiry then
+        local suc, res = pcall(function()
+            local domain = mail.Domains and mail.Domains[1]
+            DomainMailsStore.SetAsync(domain, mail.Id, mail)
+        end)
+        if suc then
+            -- print("[ MailService ]", "Mail", mail.Id, "handled")
+        else
+            warn(res)
+        end
+    else
+        local suc, res = pcall(PlayerMailsStore.SetAsync, mail.Receiver, mail.Id, mail)
+        if suc then
+            -- print("[ MailService ]", "Mail", mail.Id, "handled")
+        else
+            warn(res)
+        end
+        return suc
+    end
+end
+
+function module:Queue(mail: Mail.Type)
+    table.insert(self.Mails, mail)
+end
+
+-- 邮件接收
+function module:Pickup(mail: Mail.Type)
+    if SETTING.SENDINSTANTLY then
+        self:BackUp(mail)
+        self:Pick(mail)
+    else
+        self:Queue(mail)
+    end
+end
+
+function module:BackUp(mail)
+    if mail then
+        local sender = mail.Sender
+        if sender and typeof(sender) == "number" then
+            local player = Players:GetPlayerByUserId(sender)
+            if player then
+                local userData = PlayerDataProvider.Get(sender)
+                if userData and userData.Data then
+                    if not userData.Data.Sents then
+                        userData.Data.Sents = {}
+                    end
+                    local existed = false
+                    for _, v in ipairs(userData.Data.Sents) do
+                        if v.Id == mail.Id then
+                            existed = true
+                            break
+                        end
+                    end
+                    if not existed then
+                        table.insert(userData.Data.Sents, mail)
+                    end
+                end
+            end
+        end
+    end
+end
+
+-- #endregion
+
+return module

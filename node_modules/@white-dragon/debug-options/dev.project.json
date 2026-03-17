@@ -1,0 +1,15 @@
+{
+    "name": "DebugOptions",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Packages": {
+                "$className": "Folder",
+                "DebugOptions": {
+                    "$path": "src"
+                }
+            }
+        }
+    }
+}

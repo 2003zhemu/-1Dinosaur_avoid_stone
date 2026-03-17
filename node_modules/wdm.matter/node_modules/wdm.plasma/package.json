@@ -1,0 +1,18 @@
+{
+    "name": "wdm.plasma",
+    "version": "0.4.2",
+    "description": "",
+    "main": "index.js",
+    "author": "https://github.com/evaera/plasma",
+    "scripts": {
+        "rojo": "rojo serve dev.project.json",
+        "postinstall": "del-cli ../../Packages/wdm.plasma --force && lnk ../wdm.plasma ../../Packages ",
+        "postuninstall": "del-cli ../../Packages/wdm.plasma --force"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "wdm.rojo": "^1.0.3",
+        "del-cli": "^5.1.0",
+        "lnk-cli": "^1.0.1"
+    }
+}

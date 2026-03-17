@@ -1,0 +1,119 @@
+[
+  {
+    "Id": "金币",
+    "Name": "金币",
+    "Tags": [],
+    "Group": "货币",
+    "ValueType": {
+      "$type": "CfgNumberAndStatisticsValueType"
+    },
+    "Additions": [],
+    "Plugins": []
+  },
+  {
+    "Id": "奖杯",
+    "Name": "奖杯",
+    "Tags": [],
+    "Group": "货币",
+    "ValueType": {
+      "$type": "CfgNumberAndStatisticsValueType"
+    },
+    "Additions": [],
+    "Plugins": []
+  },
+  {
+    "Id": "经验",
+    "Name": "经验",
+    "Tags": [],
+    "Group": "属性",
+    "ValueType": {
+      "$type": "CfgNumberAndStatisticsValueType"
+    },
+    "Additions": [],
+    "Plugins": []
+  },
+  {
+    "Id": "重生次数",
+    "Name": "重生次数",
+    "Tags": [],
+    "Group": "属性",
+    "ValueType": {
+      "$type": "CfgNumberAndStatisticsValueType"
+    },
+    "Additions": [],
+    "Plugins": []
+  },
+  {
+    "Id": "骑乘恐龙",
+    "Name": "骑乘恐龙",
+    "Tags": [],
+    "Group": "属性",
+    "ValueType": {
+      "$type": "CfgNumberValueType"
+    },
+    "Additions": [],
+    "Plugins": []
+  },
+  {
+    "Id": "装备特性",
+    "Name": "装备特性",
+    "Tags": [],
+    "Group": "属性",
+    "ValueType": {
+      "$type": "CfgNumberValueType"
+    },
+    "Additions": [],
+    "Plugins": []
+  },
+  {
+    "Id": "在线时长",
+    "Name": "在线时长",
+    "Tags": [],
+    "Group": "数据",
+    "ValueType": {
+      "$type": "CfgTimeCounterValueType",
+      "AutoStart": true,
+      "TimeZone": {
+        "$type": "CfgConstValue",
+        "Key": "每日刷新时间"
+      }
+    },
+    "Additions": [],
+    "Plugins": []
+  },
+  {
+    "Id": "转盘冷却",
+    "Name": "转盘冷却",
+    "Tags": [],
+    "Group": "属性",
+    "ValueType": {
+      "$type": "CfgNumberValueType"
+    },
+    "Additions": [],
+    "Plugins": [
+      {
+        "$type": "Container.CfgTimerLockerPlugin",
+        "UnlockAction": {
+          "$type": "CfgAction",
+          "Location": {
+            "Path": "?属性增加"
+          },
+          "Args": [
+            "1"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "Id": "转盘数",
+    "Name": "转盘数",
+    "Tags": [],
+    "Group": "属性",
+    "ValueType": {
+      "$type": "CfgNumberValueType"
+    },
+    "Additions": [],
+    "Plugins": []
+  }
+]

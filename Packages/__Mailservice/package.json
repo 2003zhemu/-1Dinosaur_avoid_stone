@@ -1,0 +1,25 @@
+{
+    "name": "wdm.mailservice",
+    "version": "0.1.3",
+    "description": "",
+    "main": "index.js",
+    "author": "WhiteDragon",
+    "scripts": {
+        "rojo": "rojo serve dev.project.json",
+        "postinstall": "del-cli ../../Packages/wdm.mailservice --force && lnk ../wdm.mailservice ../../Packages ",
+        "postuninstall": "del-cli ../../Packages/wdm.mailservice --force"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "del-cli": "^5.1.0",
+        "lnk-cli": "^1.0.1",
+        "wdm.configpatcher": "^0.0.1",
+        "wdm.mailservice": "file:",
+        "wdm.rojo": "^1.0.3"
+    },
+    "file-sync": {},
+    "file-sync-overwrite": {
+        "src_ui": "UIPackages\\Mail",
+        "src_assets": "UIAssets\\Mail"
+    }
+}

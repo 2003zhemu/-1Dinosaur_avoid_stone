@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "Name": "Dirtling",
+    "NeedCups": 0,
+    "ExpBonus": 1
+  },
+  {
+    "Id": 2,
+    "Name": "Boop",
+    "NeedCups": 3,
+    "ExpBonus": 2
+  },
+  {
+    "Id": 3,
+    "Name": "Bramblehide",
+    "NeedCups": 15,
+    "ExpBonus": 5
+  },
+  {
+    "Id": 4,
+    "Name": "Grubber",
+    "NeedCups": 100,
+    "ExpBonus": 25
+  },
+  {
+    "Id": 5,
+    "Name": "Fangridge",
+    "NeedCups": 500,
+    "ExpBonus": 50
+  },
+  {
+    "Id": 6,
+    "Name": "Fulgurion",
+    "NeedCups": 1000,
+    "ExpBonus": 100
+  },
+  {
+    "Id": 7,
+    "Name": "Oblivior",
+    "NeedCups": 5000,
+    "ExpBonus": 250
+  },
+  {
+    "Id": 8,
+    "Name": "Nightmaredrake",
+    "NeedCups": 50000,
+    "ExpBonus": 500
+  },
+  {
+    "Id": 9,
+    "Name": "Asgardhide",
+    "NeedCups": 150000,
+    "ExpBonus": 1000
+  },
+  {
+    "Id": 10,
+    "Name": "Zephyron",
+    "NeedCups": 1000000,
+    "ExpBonus": 2000
+  },
+  {
+    "Id": 11,
+    "Name": "Iskryth",
+    "NeedCups": 0,
+    "ExpBonus": 8000
+  },
+  {
+    "Id": 12,
+    "Name": "Voidscale",
+    "NeedCups": 5000000,
+    "ExpBonus": 3000
+  }
+]

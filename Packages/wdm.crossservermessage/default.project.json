@@ -1,0 +1,6 @@
+{
+    "name": "CrossServerMessage",
+    "tree": {
+        "$path": "src"
+    }
+}

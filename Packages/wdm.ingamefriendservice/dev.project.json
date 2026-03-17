@@ -1,0 +1,15 @@
+{
+    "name": "InGameFriendService",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Packages": {
+                "$className": "Folder",
+                "InGameFriendService": {
+                    "$path": "src"
+                }
+            }
+        }
+    }
+}

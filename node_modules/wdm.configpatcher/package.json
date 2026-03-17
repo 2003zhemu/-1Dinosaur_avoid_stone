@@ -1,0 +1,18 @@
+{
+    "name": "wdm.configpatcher",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "author": "WhiteDragon",
+    "scripts": {
+        "rojo": "rojo serve dev.project.json",
+        "postinstall": "del-cli ../../Packages/wdm.configpatcher --force && lnk ../wdm.configpatcher ../../Packages ",
+        "postuninstall": "del-cli ../../Packages/wdm.configpatcher --force"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "wdm.rojo": "^1.0.3",
+        "del-cli": "^5.1.0",
+        "lnk-cli": "^1.0.1"
+    }
+}

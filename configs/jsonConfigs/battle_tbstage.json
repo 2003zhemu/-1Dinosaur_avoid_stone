@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "RewardCup": 1,
+    "CostCup": 50
+  },
+  {
+    "Id": 2,
+    "RewardCup": 3,
+    "CostCup": 50
+  },
+  {
+    "Id": 3,
+    "RewardCup": 10,
+    "CostCup": 50
+  },
+  {
+    "Id": 4,
+    "RewardCup": 25,
+    "CostCup": 50
+  },
+  {
+    "Id": 5,
+    "RewardCup": 35,
+    "CostCup": 50
+  },
+  {
+    "Id": 6,
+    "RewardCup": 55,
+    "CostCup": 50
+  },
+  {
+    "Id": 7,
+    "RewardCup": 95,
+    "CostCup": 67
+  },
+  {
+    "Id": 8,
+    "RewardCup": 135,
+    "CostCup": 67
+  },
+  {
+    "Id": 9,
+    "RewardCup": 195,
+    "CostCup": 67
+  },
+  {
+    "Id": 10,
+    "RewardCup": 275,
+    "CostCup": 137
+  },
+  {
+    "Id": 11,
+    "RewardCup": 365,
+    "CostCup": 182
+  },
+  {
+    "Id": 12,
+    "RewardCup": 525,
+    "CostCup": 262
+  },
+  {
+    "Id": 13,
+    "RewardCup": 745,
+    "CostCup": 372
+  },
+  {
+    "Id": 14,
+    "RewardCup": 1200,
+    "CostCup": 600
+  },
+  {
+    "Id": 15,
+    "RewardCup": 2100,
+    "CostCup": 1050
+  },
+  {
+    "Id": 16,
+    "RewardCup": 3600,
+    "CostCup": 1800
+  },
+  {
+    "Id": 17,
+    "RewardCup": 4900,
+    "CostCup": 2450
+  },
+  {
+    "Id": 18,
+    "RewardCup": 9900,
+    "CostCup": 4500
+  }
+]

@@ -1,0 +1,6 @@
+{
+    "name": "ModuleLoader",
+    "tree": {
+        "$path": "src"
+    }
+}

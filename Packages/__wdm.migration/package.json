@@ -1,0 +1,19 @@
+{
+    "name": "wdm.migration",
+    "version": "0.0.4",
+    "description": "",
+    "main": "index.js",
+    "author": "WhiteDragon",
+    "scripts": {
+        "rojo": "rojo serve dev.project.json",
+        "postinstall": "del-cli ../../Packages/wdm.migration --force && lnk ../wdm.migration ../../Packages ",
+        "postuninstall": "del-cli ../../Packages/wdm.migration --force"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "del-cli": "^5.1.0",
+        "lnk-cli": "^1.0.1",
+        "wdm.migration": "file:",
+        "wdm.rojo": "^1.0.3"
+    }
+}

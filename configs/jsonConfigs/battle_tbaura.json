@@ -1,0 +1,66 @@
+[
+  {
+    "Id": 1,
+    "Name": "Dust",
+    "CostCup": 25,
+    "Robux": 0,
+    "ExpBonus": 2,
+    "Quality": 1
+  },
+  {
+    "Id": 2,
+    "Name": "Water",
+    "CostCup": 250,
+    "Robux": 0,
+    "ExpBonus": 5,
+    "Quality": 2
+  },
+  {
+    "Id": 3,
+    "Name": "Shadow",
+    "CostCup": 500,
+    "Robux": 0,
+    "ExpBonus": 15,
+    "Quality": 3
+  },
+  {
+    "Id": 4,
+    "Name": "Fire",
+    "CostCup": 10000,
+    "Robux": 0,
+    "ExpBonus": 50,
+    "Quality": 4
+  },
+  {
+    "Id": 5,
+    "Name": "Snow",
+    "CostCup": 15000,
+    "Robux": 0,
+    "ExpBonus": 100,
+    "Quality": 5
+  },
+  {
+    "Id": 6,
+    "Name": "Rainbow",
+    "CostCup": 50000,
+    "Robux": 0,
+    "ExpBonus": 250,
+    "Quality": 6
+  },
+  {
+    "Id": 7,
+    "Name": "Light",
+    "CostCup": 250000,
+    "Robux": 0,
+    "ExpBonus": 500,
+    "Quality": 7
+  },
+  {
+    "Id": 8,
+    "Name": "Starlight",
+    "CostCup": 500000,
+    "Robux": 0,
+    "ExpBonus": 1000,
+    "Quality": 8
+  }
+]

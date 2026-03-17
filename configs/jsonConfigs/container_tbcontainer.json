@@ -1,0 +1,344 @@
+[
+  {
+    "Id": "货币",
+    "Name": "货币",
+    "Tags": [],
+    "Primary": true,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgPropertyContainerType",
+      "SlotPlugins": [
+        {
+          "$type": "Property.CfgPropertySimpleMathPlugin"
+        }
+      ],
+      "SlotProvider": {
+        "$type": "Property.CfgPropertySlotProviderPlugin",
+        "PropertyGroups": [
+          "货币"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "属性",
+    "Name": "属性",
+    "Tags": [],
+    "Primary": true,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgPropertyContainerType",
+      "SlotPlugins": [
+        {
+          "$type": "Property.CfgPropertySimpleMathPlugin"
+        }
+      ],
+      "SlotProvider": {
+        "$type": "Property.CfgPropertySlotProviderPlugin",
+        "PropertyGroups": [
+          "属性"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "数据",
+    "Name": "数据",
+    "Tags": [],
+    "Primary": true,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgPropertyContainerType",
+      "SlotPlugins": [
+        {
+          "$type": "Property.CfgPropertySimpleMathPlugin"
+        }
+      ],
+      "SlotProvider": {
+        "$type": "Property.CfgPropertySlotProviderPlugin",
+        "PropertyGroups": [
+          "数据"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "Lua委托值",
+    "Name": "Lua委托值",
+    "Tags": [],
+    "Primary": true,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgPropertyContainerType",
+      "SlotPlugins": [
+        {
+          "$type": "Property.CfgPropertySimpleMathPlugin"
+        }
+      ],
+      "SlotProvider": {
+        "$type": "Property.CfgPropertySlotProviderPlugin",
+        "PropertyGroups": [
+          "Lua委托值"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "帮助",
+    "Name": "/Container/帮助",
+    "Tags": [],
+    "Primary": true,
+    "Plugins": [
+      {
+        "$type": "Container.CfgGetItemConfigPlugin"
+      },
+      {
+        "$type": "Container.CfgGetPropertyConfigPlugin"
+      },
+      {
+        "$type": "Container.CfgGetVendorConfigPlugin"
+      },
+      {
+        "$type": "Container.CfgGetLevelConfigPlugin"
+      },
+      {
+        "$type": "Container.CfgGetSortSetConfigPlugin"
+      },
+      {
+        "$type": "Container.CfgUnverifiedStoragePlugin"
+      },
+      {
+        "$type": "CfgLuaPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "CfgAggregateContainerType",
+      "Children": []
+    }
+  },
+  {
+    "Id": "罗布乐思接口",
+    "Name": "/Container/罗布乐思接口",
+    "Tags": [],
+    "Primary": true,
+    "Plugins": [
+      {
+        "$type": "CfgRobloxApiPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "CfgAggregateContainerType",
+      "Children": []
+    }
+  },
+  {
+    "Id": "活动",
+    "Name": "活动",
+    "Tags": [],
+    "Primary": true,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "CfgAggregateContainerType",
+      "Children": [
+        "群组奖励",
+        "转盘奖励",
+        "每日登录奖励",
+        "在线时长奖励"
+      ]
+    }
+  },
+  {
+    "Id": "现金",
+    "Name": "现金",
+    "Tags": [],
+    "Primary": true,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "CfgAggregateContainerType",
+      "Children": [
+        "买速度",
+        "通行证",
+        "买功能"
+      ]
+    }
+  },
+  {
+    "Id": "买速度",
+    "Name": "买速度",
+    "Tags": [],
+    "Primary": false,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgVenderContainerType",
+      "SlotPlugins": [
+        {
+          "$type": "Vendor.CfgRobloxProductGift"
+        }
+      ],
+      "SlotProvider": {
+        "$type": "Vender.CfgVendorSlotProvider",
+        "VenderGroups": [
+          "买速度"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "买功能",
+    "Name": "买功能",
+    "Tags": [],
+    "Primary": false,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgVenderContainerType",
+      "SlotPlugins": [],
+      "SlotProvider": {
+        "$type": "Vender.CfgVendorSlotProvider",
+        "VenderGroups": [
+          "买功能"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "通行证",
+    "Name": "通行证",
+    "Tags": [],
+    "Primary": false,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgVenderContainerType",
+      "SlotPlugins": [
+        {
+          "$type": "Vendor.CfgRobloxProductGift"
+        }
+      ],
+      "SlotProvider": {
+        "$type": "Vender.CfgVendorSlotProvider",
+        "VenderGroups": [
+          "通行证"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "每日登录奖励",
+    "Name": "每日登录奖励",
+    "Tags": [],
+    "Primary": false,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgVenderContainerType",
+      "SlotPlugins": [],
+      "SlotProvider": {
+        "$type": "Vender.CfgVendorSlotProvider",
+        "VenderGroups": [
+          "每日登录奖励"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "群组奖励",
+    "Name": "群组奖励",
+    "Tags": [],
+    "Primary": false,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgVenderContainerType",
+      "SlotPlugins": [],
+      "SlotProvider": {
+        "$type": "Vender.CfgVendorSlotProvider",
+        "VenderGroups": [
+          "群组奖励"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "在线时长奖励",
+    "Name": "在线时长奖励",
+    "Tags": [],
+    "Primary": false,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgVenderContainerType",
+      "SlotPlugins": [],
+      "SlotProvider": {
+        "$type": "Vender.CfgVendorSlotProvider",
+        "VenderGroups": [
+          "在线时长奖励"
+        ]
+      }
+    }
+  },
+  {
+    "Id": "转盘奖励",
+    "Name": "转盘奖励",
+    "Tags": [],
+    "Primary": false,
+    "Plugins": [
+      {
+        "$type": "Container.CfgElementContainerInfoPlugin"
+      }
+    ],
+    "Type": {
+      "$type": "Property.CfgVenderContainerType",
+      "SlotPlugins": [],
+      "SlotProvider": {
+        "$type": "Vender.CfgVendorSlotProvider",
+        "VenderGroups": [
+          "转盘奖励"
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "wdm.gameanalytics",
+  "version": "2.2.4",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "scripts": {
+    "rojo": "rojo serve dev.project.json",
+    "postinstall": "del-cli ../../Packages/wdm.gameanalytics --force&& lnk ../wdm.gameanalytics ../../Packages ",
+    "postuninstall": "del-cli ../../Packages/wdm.gameanalytics --force"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,307 @@
+local event = script.Parent:WaitForChild("RemoteEvent")
+local invoke = script.Parent:WaitForChild("RemoteFunction")
+
+local defines = require(script.Parent.defines)
+local PlayerDataProvider = require(script.Parent.PlayerDataProvider)
+local AttachmentHandler = require(script.Parent.AttachmentHandler)
+local MailConfig = require(script.Parent.MailConfig)
+
+local Mail = require(script.Parent.entities.Mail)
+local Postman = require(script.Parent.entities.Postman).new()
+local Pickman = require(script.Parent.entities.Pickman).new()
+
+local module = {}
+
+-- 设置玩家数据提供者
+-- @param func function 玩家数据提供函数
+function module.SetPlayerDataProvider(func: (userId: number) -> any)
+	PlayerDataProvider.Set(func)
+end
+
+-- 设置附件处理器
+-- @param func function 附件处理函数
+function module.SetAttachmentHandler(func: (userId: number, senderId: number, attachment: { [string]: any }) -> boolean)
+	AttachmentHandler.Set(func)
+end
+
+-- 创建新邮件
+-- @return Mail.Type 新邮件对象
+function module.CreateMail(): Mail.Type
+	local mail = Mail.new()
+	return mail
+end
+
+-- 发送邮件
+-- @param mail Mail.Type 邮件对象
+-- @return boolean 发送结果
+function module.SendMail(mail: Mail.Type)
+	return Pickman:Pickup(mail)
+end
+
+-- 发送邮件
+-- @param senderId number 发送者ID
+-- @param receiverId number 接收者ID
+-- @param gift defines.Gift 礼物对象
+-- @return boolean 发送结果
+function module.SendGiftMail(senderId, receiverId, gift: defines.Gift)
+	assert(senderId, "senderId is nil")
+	assert(receiverId, "receiverId is nil")
+	assert(gift, "gift is nil")
+	assert(gift.Id, "gift.Id is nil")
+	assert(gift.Type, "gift.Type is nil")
+	assert(gift.Count, "gift.Count is nil")
+
+	local mail = module.CreateMail()
+	mail:SetSender(senderId)
+	mail:SetReceiver(receiverId)
+	mail:SetSubject("Gift")
+	mail:SetContent(MailConfig.GiftMessage)
+	mail:SetAttachment({ gift })
+	return Pickman:Pickup(mail)
+end
+
+-- 获取邮件
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return table 邮件对象
+function module.GetMail(userId: number, mailId: number)
+	local data = PlayerDataProvider.Get(userId)
+	if data then
+		local mails = data.Data.Mails
+		if mails then
+			for _, mail in ipairs(mails) do
+				if mail.Id == mailId then
+					return table.clone(mail)
+				end
+			end
+		end
+	end
+end
+
+-- 标记邮件状态
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @param status number 邮件状态
+-- @return boolean 是否成功
+function module.MarkMail(userId: number, mailId: number, status: number)
+	local data = PlayerDataProvider.Get(userId)
+	if data then
+		local mails = data.Data.Mails
+		if mails then
+			for _, mail in ipairs(mails) do
+				if mail.Id == mailId and mail.Status < status then
+					mail.Status = status
+					return true
+				end
+			end
+		end
+	end
+end
+
+-- 获取邮件状态
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return number 邮件状态
+function module.GetMailStatus(userId: number, mailId: number)
+	local mail = module.GetMail(userId, mailId)
+	if mail then
+		return mail.Status
+	end
+end
+
+-- 删除邮件
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return boolean 是否成功
+function module.DeleteMail(userId: number, mailId: number)
+	return module.MarkMailAsDeleted(userId, mailId)
+end
+
+-- 标记邮件为已读
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return boolean 是否成功
+function module.MarkMailAsRead(userId: number, mailId: number)
+	return module.MarkMail(userId, mailId, 2)
+end
+
+-- 标记邮件为未读
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return boolean 是否成功
+function module.MarkMailAsUnread(userId: number, mailId: number)
+	return module.MarkMail(userId, mailId, 1)
+end
+
+-- 标记邮件为已领取
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return boolean 是否成功
+function module.MarkMailAsClaimed(userId: number, mailId: number)
+	return module.MarkMail(userId, mailId, 3)
+end
+
+-- 标记邮件为已删除
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return boolean 是否成功
+function module.MarkMailAsDeleted(userId: number, mailId: number)
+	return module.MarkMail(userId, mailId, 10)
+end
+
+-- 获取邮件列表
+-- @param userId number 用户ID
+-- @return table 邮件列表
+function module.GetMailList(userId: number)
+	local data = PlayerDataProvider.Get(userId)
+	if data and data.Data.Mails then
+		return table.clone(data.Data.Mails)
+	end
+	return nil
+end
+
+-- 获取未读邮件列表
+-- @param userId number 用户ID
+-- @return table 未读邮件列表
+function module.GetUnreadMailList(userId: number)
+	local mails = module.GetMailList(userId)
+	if mails then
+		local unreadMails = {}
+		for _, mail in ipairs(mails) do
+			if mail.Status == 1 then
+				table.insert(unreadMails, mail)
+			end
+		end
+		return unreadMails
+	end
+end
+
+-- 获取未领取邮件列表
+-- @param userId number 用户ID
+-- @return table 未领取邮件列表
+function module.GetUnclaimedMailList(userId: number)
+	local mails = module.GetMailList(userId)
+	if mails then
+		local unclaimedMails = {}
+		for _, mail in ipairs(mails) do
+			if mail.Status < 3 then
+				table.insert(unclaimedMails, mail)
+			end
+		end
+		return unclaimedMails
+	end
+end
+
+-- 获取邮件附件
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return table 邮件附件
+function module.GetMailAttachment(userId: number, mailId: number)
+	local mail = module.GetMail(userId, mailId)
+	if mail then
+		return mail.Attachment
+	end
+end
+
+-- 处理邮件附件
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return boolean, string 成功时返回true，失败时返回false和错误信息
+function module.ClaimMailAttachment(userId: number, mailId: number)
+	local mail = module.GetMail(userId, mailId)
+	local attachment = mail and mail.Attachment
+	local senderId = mail and mail.Sender
+
+	if attachment then
+		local status = module.GetMailStatus(userId, mailId)
+		if status >= 3 then
+			return false, "Status error"
+		end
+		module.MarkMailAsClaimed(userId, mailId)
+		local suc = AttachmentHandler.Handle(userId, senderId, attachment)
+		if suc then
+			return true, { attachment }
+		else
+			module.MarkMailAsRead(userId, mailId)
+			return false, "AttachmentHandler failed"
+		end
+	else
+		return false, "Attachment not found"
+	end
+end
+
+-- 处理所有邮件附件
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return boolean, string 成功时返回true，失败时返回false和错误信息
+function module.ClaimAllMailsAttachment(userId, mailids)
+	local attachments = {}
+	if mailids and typeof(mailids) == "table" then
+		for _, mailId in ipairs(mailids) do
+			local mail = module.GetMail(userId, mailId)
+			if mail then
+				if mail.Status < 3 then
+					local res, attas = module.ClaimMailAttachment(userId, mailId)
+					if res then
+						table.insert(attachments, attas[1])
+					end
+				end
+			end
+		end
+	end
+	local mails = module.GetMailList(userId)
+	if mails then
+		for i, mail in pairs(mails) do
+			local mailId = mail.Id
+			if mail.Status < 3 then
+				local res, attas = module.ClaimMailAttachment(userId, mailId)
+				if res then
+					table.insert(attachments, attas[1])
+				end
+			end
+		end
+	end
+	return true, attachments
+end
+
+-- 删除所有邮件
+-- @param userId number 用户ID
+-- @param mailId number 邮件ID
+-- @return boolean 是否成功
+function module.DeleteAllMails(userId: number)
+	local mails = module.GetMailList(userId)
+	if mails then
+		for i, mail in pairs(mails) do
+			local mailId = mail.Id
+			if mail.Status == 3 or not mail.Attachment or (not next(mail.Attachment)) then
+				module.DeleteMail(userId, mailId)
+			end
+		end
+	end
+end
+
+-- 获取已发送邮件列表
+-- @param userId number 用户ID
+-- @return table 已发送邮件列表
+function module.GetSentMailList(userId: number)
+	local data = PlayerDataProvider.Get(userId)
+	if data and data.Data.Sents then
+		return table.clone(data.Data.Sents)
+	end
+end
+
+-- 服务器调用处理函数
+-- @param player Player 玩家对象
+-- @param ... 其他参数
+-- @return 根据调用的函数返回相应结果
+invoke.OnServerInvoke = function(player, ...)
+	local client = require(script.Parent.client)
+	local args = { ... }
+	local funcName = table.remove(args, 1)
+	local func = client[funcName] and module[funcName]
+	if func then
+		return func(table.unpack(args))
+	end
+end
+
+return module

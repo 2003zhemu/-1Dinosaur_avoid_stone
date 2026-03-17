@@ -1,0 +1,22 @@
+[
+  {
+    "Id": "货币",
+    "Name": "货币",
+    "Plugins": []
+  },
+  {
+    "Id": "属性",
+    "Name": "属性",
+    "Plugins": []
+  },
+  {
+    "Id": "数据",
+    "Name": "数据",
+    "Plugins": []
+  },
+  {
+    "Id": "Lua委托值",
+    "Name": "Lua委托值",
+    "Plugins": []
+  }
+]

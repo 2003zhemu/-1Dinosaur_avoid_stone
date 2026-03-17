@@ -1,0 +1,15 @@
+{
+    "name": "CodeService",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Packages": {
+                "$className": "Folder",
+                "CodeService": {
+                    "$path": "src"
+                }
+            }
+        }
+    }
+}

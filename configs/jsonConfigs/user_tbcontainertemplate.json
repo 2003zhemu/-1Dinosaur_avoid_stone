@@ -1,0 +1,32 @@
+[
+  {
+    "Id": "开发",
+    "Data": [
+      {
+        "Parent": "货币",
+        "Elements": [
+          {
+            "SlotId": "金币",
+            "Count": 1000
+          }
+        ]
+      }
+    ],
+    "Actions": []
+  },
+  {
+    "Id": "正式",
+    "Data": [
+      {
+        "Parent": "货币",
+        "Elements": [
+          {
+            "SlotId": "金币",
+            "Count": 100
+          }
+        ]
+      }
+    ],
+    "Actions": []
+  }
+]

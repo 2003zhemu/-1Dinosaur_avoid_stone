@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "活动",
+    "Name": "活动",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "买速度",
+    "Name": "买速度",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "买功能",
+    "Name": "买功能",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "通行证",
+    "Name": "通行证",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "每日登录奖励",
+    "Name": "每日登录奖励",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "群组奖励",
+    "Name": "群组奖励",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "在线时长奖励",
+    "Name": "在线时长奖励",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  },
+  {
+    "Id": "转盘奖励",
+    "Name": "转盘奖励",
+    "Plugins": [],
+    "Logics": [],
+    "Costs": [],
+    "Products": [],
+    "PostActions": []
+  }
+]

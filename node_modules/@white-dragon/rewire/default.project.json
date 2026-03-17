@@ -1,0 +1,6 @@
+{
+    "name": "rewire",
+    "tree": {
+        "$path": "src"
+    }
+}

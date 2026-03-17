@@ -1,0 +1,6 @@
+{
+    "name": "AdminModule",
+    "tree": {
+        "$path": "src"
+    }
+}

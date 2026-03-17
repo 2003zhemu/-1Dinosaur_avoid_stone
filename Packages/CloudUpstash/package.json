@@ -1,0 +1,23 @@
+{
+  "name": "wdm.cloud-upstash",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "scripts": {
+    "rojo": "rojo serve dev.project.json"
+  },
+  "file-sync-overwrite": {
+    "": "Packages/CloudUpstash"
+  },
+  "files": [
+    "src",
+    "default.project.json",
+    "readme.md"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "wdm.rojo": "^1.0.3",
+    "wdm.testez": "^0.4.8"
+  }
+}

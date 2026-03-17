@@ -1,0 +1,6 @@
+{
+    "name": "Environment",
+    "tree": {
+        "$path": "src"
+    }
+}

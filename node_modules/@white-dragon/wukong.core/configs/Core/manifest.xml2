@@ -1,0 +1,20 @@
+<root>
+	<!-- Excel配置,表 -->
+	<importexcel name="Core/__tables__.xlsx" type="table"/>
+
+
+	<!-- Excel配置,枚举 -->
+
+	<importexcel name="Core/Defines/__enums__.xlsx" type="enum"/>
+
+	<!-- Excel配置,定义 -->
+
+	<importexcel name="Core/Defines/基础组件.xlsx" type="bean"/>
+	<importexcel name="Core/Defines/容器系统.xlsx" type="bean"/>
+	<importexcel name="Core/Defines/属性系统.xlsx" type="bean"/>
+	<importexcel name="Core/Defines/物品系统.xlsx" type="bean"/>
+	<importexcel name="Core/Defines/售卖系统.xlsx" type="bean"/>
+	<importexcel name="Core/Defines/玩家系统.xlsx" type="bean"/>
+	<importexcel name="Core/Defines/关卡系统.xlsx" type="bean"/>	
+	<importexcel name="Core/Defines/管理系统.xlsx" type="bean"/>	
+</root>

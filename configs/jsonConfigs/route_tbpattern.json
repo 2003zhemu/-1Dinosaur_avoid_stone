@@ -1,0 +1,14 @@
+[
+  {
+    "Pattern": ".+%?购买",
+    "IsAllow": true
+  },
+  {
+    "Pattern": ".+%?多次购买",
+    "IsAllow": true
+  },
+  {
+    "Pattern": "/设置/.+%?设置当前值",
+    "IsAllow": true
+  }
+]

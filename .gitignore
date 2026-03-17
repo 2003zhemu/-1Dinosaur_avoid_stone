@@ -1,0 +1,26 @@
+.cache.meta
+DevPackages/
+CarBuilderTest/
+l10n/NotLocalized.txt
+sourcemap.json
+~$*
+_genConfigs/
+.main.project.json
+build/
+.bin/
+Demo/
+pages/
+doc_modules/
+*.tgz
+.favorites.json
+_genConfigs/
+sourcemap.json
+# ignore .vscode but not template
+.vscode/*
+!.vscode/templates/
+.npmrc
+package-lock.json
+UIAssets/
+UIPackages/
+package-lock.json
+_genConfigsJson/

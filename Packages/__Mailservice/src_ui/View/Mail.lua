@@ -1,0 +1,23 @@
+local defines = require(game.ReplicatedStorage.Packages.Neza.Defines)
+local module = {} :: defines.View
+local gui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+function module:Load()
+	self.DataContext.State.Gui = self:GetNode("MailGui")
+	self.DataContext.State.Gui.Enabled = false
+	self.DataContext.State.Gui.Parent = gui
+	self:SetContent(self.DataContext.State.Gui)
+
+	-- self:GetComponent(self.DataContext.State.Gui, defines.Animator):SetTransition("Back")
+end
+
+function module:OnOpen()
+	self.DataContext.State.Gui.Enabled = true
+	if not gui:FindFirstChild("MailGui") then
+		self.DataContext.State.Gui.Parent = gui
+	end
+end
+
+function module:BindBtns() end
+
+return module

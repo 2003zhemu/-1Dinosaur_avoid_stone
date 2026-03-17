@@ -1,0 +1,123 @@
+{
+  "name": "DinosaurSpeed",
+  "servePort": 34880,
+  "globIgnorePaths": [
+    "_genConfigs/*.json"
+  ],
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Utils": {
+        "$path": "src/ReplicatedStorage/Utils"
+      },
+      "UI": {
+          "$path": "src/ReplicatedStorage/UI"
+      },
+       "_genConfigs": {
+        "$path": "build/wukongLuaConfigs"
+      },
+      "WuKongHooks": {
+        "$path": "src/ReplicatedStorage/WuKongHooks"
+      },
+      "WuKongExtension": {
+        "$path": "src/ReplicatedStorage/WuKongExtension"
+      },
+      "Battle": {
+        "$className": "Folder",
+        "Config": {
+          "$path": "src/ReplicatedStorage/Battle/Config"
+        },
+        "Core": {
+          "$path": "src/ReplicatedStorage/Battle/Core"
+        },
+        "Game": {
+          "$path": "src/ReplicatedStorage/Battle/Game"
+        },
+        "Packages": {
+          "$className": "Folder",
+          "Matter": {
+            "$path": "Packages/wdm.matter/lib"
+          },
+          "plasma": {
+            "$path": "Packages/wdm.plasma/src"
+          },
+          "rewire": {
+            "$path": "Packages/wdm.rewire/src"
+          },
+          "FlagEnum": {
+            "$path": "src/ReplicatedStorage/Battle/Packages/FlagEnum"
+          },
+          "StackFsm": {
+            "$path": "src/ReplicatedStorage/Battle/Packages/StackFsm"
+          },
+          "Generic": {
+            "$path": "src/ReplicatedStorage/Battle/Packages/Generic"
+          },
+          "GameTime": {
+            "$path": "src/ReplicatedStorage/Battle/Packages/GameTime"
+          },
+          "MatterExtension": {
+            "$path": "src/ReplicatedStorage/Battle/Packages/MatterExtension"
+          },
+          "KDTree": {
+            "$path": "src/ReplicatedStorage/Battle/Packages/KDTree"
+          },
+          "CameraShaker": {
+            "$path": "src/ReplicatedStorage/Battle/Packages/CameraShaker"
+          }
+        }
+      },
+      "Helper": {
+        "$className": "Folder",
+        "$path": "src/ReplicatedStorage/Helper"
+      },
+       "Modules": {
+        "$className": "Folder",
+        "$path": "src/ReplicatedStorage/Modules"
+      },
+      "ToolModules": {
+        "$className": "Folder",
+        "$path": "src/ReplicatedStorage/ToolModules"
+      },
+      "Configs": {
+        "$path": "src/ReplicatedStorage/Configs"
+      },
+      "Packages": {
+        "$path": "Packages",
+        "AudioManager": {
+          "$path": "node_modules/wdm.audiomanager/src"
+        },
+        "Neza": {
+          "$path": "node_modules/@white-dragon/neza"
+        }
+      },
+      "WuKong": {
+            "$path": "node_modules/wdm.wukong/src"
+        },
+      "Assets": {
+          "$className": "Folder",
+          "sprites": {
+              "$path": "Assets/sprites"
+          }
+      },
+      "SpriteSheets": {
+          "$className": "Folder",
+          "$path": "Assets/sprites"
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "$ignoreUnknownInstances": true,
+      "$path": "src/ServerScriptService"
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$ignoreUnknownInstances": true,
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "$path": "src/StarterPlayerScripts"
+      }
+    }
+  }
+}

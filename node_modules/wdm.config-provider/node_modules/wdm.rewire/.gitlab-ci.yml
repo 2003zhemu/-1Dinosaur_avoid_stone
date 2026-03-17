@@ -1,0 +1,76 @@
+
+stages:
+  - deploy
+  - report
+
+variables:
+  DOC_URL: "http://roblox.blm.plus/wdm.rewire" # 文档地址
+  REPORT_SUCCESS_URL: "https://www.feishu.cn/flow/api/trigger-webhook/14f8de25bf404c4de58c27d88b7ba5d0" # 汇报成功地址
+  REPORT_ERROR_URL: "https://www.feishu.cn/flow/api/trigger-webhook/ce51942c1abc0976959be7a085c9f32d" # 汇报失败地址
+
+
+# 页面
+pages:
+  stage: deploy
+  script:
+    - npm install
+    - npm run doc:build  
+  artifacts:
+    paths:
+    - build
+  publish: build
+  cache:  # Cache modules using lock file2
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules/
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master" && $CI_COMMIT_MESSAGE =~ "/^[0-9]+\.[0-9]+\.[0-9]+/"
+
+# 发布 (仅支持以版本号命名的提交)
+publish:
+  stage: deploy
+  script:
+    - npm install
+    - npm publish
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master" && $CI_COMMIT_MESSAGE =~ "/^[0-9]+\.[0-9]+\.[0-9]+/"
+
+# 成功后汇报
+job_on_success:
+  stage: report
+  script:
+    - |
+      $uri = "$REPORT_SUCCESS_URL"
+      $body = @{
+          repo = "$env:CI_PROJECT_NAME"
+          message = "$env:CI_COMMIT_MESSAGE"
+          version = "$env:CI_COMMIT_MESSAGE"
+          repoPath = "$env:CI_SERVER_URL/$env:CI_PROJECT_PATH"
+          docPath = "$DOC_URL"
+          pipelinePath = "$CI_PROJECT_URL/pipelines/$CI_PIPELINE_ID"
+          historyPath = "$env:CI_SERVER_URL/$env:CI_PROJECT_PATH/changelog"
+          status = "$env:CI_PIPELINE_STATUS"
+      } | ConvertTo-Json
+      Invoke-WebRequest -Uri $uri  -UseBasicParsing -Method Post -ContentType "application/json" -Body $body  
+  when: on_success
+
+# 失败后汇报
+job_on_failure:
+  stage: report
+  script:
+    - |
+      $uri = "$REPORT_ERROR_URL"
+      $body = @{
+          repo = "$env:CI_PROJECT_NAME"
+          message = "$env:CI_COMMIT_MESSAGE"
+          version = "$env:CI_COMMIT_MESSAGE"
+          repoPath = "$env:CI_SERVER_URL/$env:CI_PROJECT_PATH"
+          docPath = "$DOC_URL"
+          pipelinePath = "$CI_PROJECT_URL/pipelines/$CI_PIPELINE_ID"
+          historyPath = "$env:CI_SERVER_URL/$env:CI_PROJECT_PATH/changelog"
+          status = "$env:CI_PIPELINE_STATUS"
+      } | ConvertTo-Json
+      Invoke-WebRequest -Uri $uri -Method Post -ContentType "application/json" -Body $body  
+  when: on_failure

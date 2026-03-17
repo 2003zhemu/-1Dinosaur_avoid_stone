@@ -1,0 +1,6 @@
+{
+    "name": "ConfigPatcher",
+    "tree": {
+        "$path": "src"
+    }
+}

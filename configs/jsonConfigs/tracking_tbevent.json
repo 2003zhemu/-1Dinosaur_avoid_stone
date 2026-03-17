@@ -1,0 +1,146 @@
+[
+  {
+    "Id": "玩家当前使用恐龙",
+    "IsClient": false,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "player:dragon"
+    }
+  },
+  {
+    "Id": "玩家关卡进度（电脑）",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "player:stagepc"
+    }
+  },
+  {
+    "Id": "玩家关卡进度（手机）",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "player:stagephone"
+    }
+  },
+  {
+    "Id": "玩家重生进度",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "player:rebirth"
+    }
+  },
+  {
+    "Id": "新手玩家加载开始",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:load:start"
+    }
+  },
+  {
+    "Id": "新手玩家进入大厅",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Enter:lobby"
+    }
+  },
+  {
+    "Id": "新手玩家购买恐龙",
+    "IsClient": false,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Dino:purchase"
+    }
+  },
+  {
+    "Id": "新手玩家收获金币",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:gold:gain"
+    }
+  },
+  {
+    "Id": "新手玩家打开骑乘图鉴",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Idex:open"
+    }
+  },
+  {
+    "Id": "新手玩家退出骑乘恐龙",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Ride:quit"
+    }
+  },
+  {
+    "Id": "新手玩家购买道具",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Item:buy"
+    }
+  },
+  {
+    "Id": "新手玩家偷取恐龙",
+    "IsClient": false,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Steal:get"
+    }
+  },
+  {
+    "Id": "新手玩家成功偷取恐龙",
+    "IsClient": false,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Steal:finish"
+    }
+  },
+  {
+    "Id": "新手玩家进行第一次重生",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Ribirth:accomplish"
+    }
+  },
+  {
+    "Id": "新手玩家转盘一次",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:spin:wheel"
+    }
+  },
+  {
+    "Id": "新手玩家七日签到第二日领取",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Sign:two"
+    }
+  },
+  {
+    "Id": "新手玩家七日签到第七日领取",
+    "IsClient": true,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "new:Sign:seven"
+    }
+  },
+  {
+    "Id": "玩家重生情况",
+    "IsClient": false,
+    "EventType": {
+      "$type": "EventDesign",
+      "Name": "First:Ribirth"
+    }
+  }
+]

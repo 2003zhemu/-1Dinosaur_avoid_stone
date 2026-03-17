@@ -1,0 +1,122 @@
+[
+  {
+    "Id": "重生0",
+    "MaxLevel": 15,
+    "ExpRate": 1
+  },
+  {
+    "Id": "重生1",
+    "MaxLevel": 30,
+    "ExpRate": 1.5
+  },
+  {
+    "Id": "重生2",
+    "MaxLevel": 45,
+    "ExpRate": 2
+  },
+  {
+    "Id": "重生3",
+    "MaxLevel": 60,
+    "ExpRate": 2.5
+  },
+  {
+    "Id": "重生4",
+    "MaxLevel": 75,
+    "ExpRate": 3
+  },
+  {
+    "Id": "重生5",
+    "MaxLevel": 90,
+    "ExpRate": 3.5
+  },
+  {
+    "Id": "重生6",
+    "MaxLevel": 105,
+    "ExpRate": 4
+  },
+  {
+    "Id": "重生7",
+    "MaxLevel": 120,
+    "ExpRate": 4.5
+  },
+  {
+    "Id": "重生8",
+    "MaxLevel": 135,
+    "ExpRate": 5
+  },
+  {
+    "Id": "重生9",
+    "MaxLevel": 150,
+    "ExpRate": 5.5
+  },
+  {
+    "Id": "重生10",
+    "MaxLevel": 165,
+    "ExpRate": 6
+  },
+  {
+    "Id": "重生11",
+    "MaxLevel": 180,
+    "ExpRate": 6.5
+  },
+  {
+    "Id": "重生12",
+    "MaxLevel": 195,
+    "ExpRate": 7
+  },
+  {
+    "Id": "重生13",
+    "MaxLevel": 210,
+    "ExpRate": 7.5
+  },
+  {
+    "Id": "重生14",
+    "MaxLevel": 225,
+    "ExpRate": 8
+  },
+  {
+    "Id": "重生15",
+    "MaxLevel": 240,
+    "ExpRate": 8.5
+  },
+  {
+    "Id": "重生16",
+    "MaxLevel": 255,
+    "ExpRate": 9
+  },
+  {
+    "Id": "重生17",
+    "MaxLevel": 270,
+    "ExpRate": 9.5
+  },
+  {
+    "Id": "重生18",
+    "MaxLevel": 285,
+    "ExpRate": 10
+  },
+  {
+    "Id": "重生19",
+    "MaxLevel": 300,
+    "ExpRate": 10.5
+  },
+  {
+    "Id": "重生20",
+    "MaxLevel": 315,
+    "ExpRate": 11
+  },
+  {
+    "Id": "重生21",
+    "MaxLevel": 330,
+    "ExpRate": 11.5
+  },
+  {
+    "Id": "重生22",
+    "MaxLevel": 345,
+    "ExpRate": 12
+  },
+  {
+    "Id": "重生23",
+    "MaxLevel": 360,
+    "ExpRate": 12.5
+  }
+]

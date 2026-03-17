@@ -1,0 +1,15 @@
+{
+    "name": "AwardInviteService",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Packages": {
+                "$className": "Folder",
+                "AwardInviteService": {
+                    "$path": "src"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "ConfigProvider",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Packages": {
+                "$className": "Folder",
+                "ConfigProvider": {
+                    "$path": "src"
+                }
+            }
+        }
+    }
+}

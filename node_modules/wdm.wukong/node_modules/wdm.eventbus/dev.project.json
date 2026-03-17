@@ -1,0 +1,15 @@
+{
+    "name": "EventBus",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Packages": {
+                "$className": "Folder",
+                "EventBus": {
+                    "$path": "src"
+                }
+            }
+        }
+    }
+}
