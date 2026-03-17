@@ -1,158 +1,158 @@
-local TweenService = game:GetService("TweenService")
-local carfolder = game:GetService("Workspace"):WaitForChild("Obstacles"):WaitForChild("Stage20")
+-- local TweenService = game:GetService("TweenService")
+-- local carfolder = game:GetService("Workspace"):WaitForChild("Obstacles"):WaitForChild("Stage20")
 
--- 存储所有车的状态
-local cars = {}
+-- -- 存储所有车的状态
+-- local cars = {}
 
--- 初始化所有车的状态
-local function initCars()
-	local posz = -32962.637
-	for i = 1, 3 do
-		table.insert(cars, {
-			car = carfolder["car" .. i],
-			startPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
-			endPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
-			isMoving = false,
-			nextActionTime = tick() + math.random(0, 2), -- 每辆车不同的初始等待时间
-			probabilities = 1,
-			timestart = 2,
-			timeend = 2,
-			minspeed = 1,
-			maxspeed = 2,
-		})
-		posz -= 110
-	end
+-- -- 初始化所有车的状态
+-- local function initCars()
+-- 	local posz = -32962.637
+-- 	for i = 1, 3 do
+-- 		table.insert(cars, {
+-- 			car = carfolder["car" .. i],
+-- 			startPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
+-- 			endPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
+-- 			isMoving = false,
+-- 			nextActionTime = tick() + math.random(0, 2), -- 每辆车不同的初始等待时间
+-- 			probabilities = 1,
+-- 			timestart = 2,
+-- 			timeend = 2,
+-- 			minspeed = 1,
+-- 			maxspeed = 2,
+-- 		})
+-- 		posz -= 110
+-- 	end
 
-	posz = -33307.637
-	for i = 4, 6 do
-		table.insert(cars, {
-			car = carfolder["car" .. i],
-			startPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
-			endPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
-			isMoving = false,
-			nextActionTime = tick() + math.random(0, 2),
-			probabilities = 1,
-			timestart = 2,
-			timeend = 2,
-			minspeed = 1,
-			maxspeed = 2,
-		})
-		posz -= 110
-	end
+-- 	posz = -33307.637
+-- 	for i = 4, 6 do
+-- 		table.insert(cars, {
+-- 			car = carfolder["car" .. i],
+-- 			startPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
+-- 			endPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
+-- 			isMoving = false,
+-- 			nextActionTime = tick() + math.random(0, 2),
+-- 			probabilities = 1,
+-- 			timestart = 2,
+-- 			timeend = 2,
+-- 			minspeed = 1,
+-- 			maxspeed = 2,
+-- 		})
+-- 		posz -= 110
+-- 	end
 
-	posz = -33756.637
-	for i = 7, 9 do
-		table.insert(cars, {
-			car = carfolder["car" .. i],
-			startPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
-			endPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
-			isMoving = false,
-			nextActionTime = tick() + math.random(0, 2),
-			probabilities = 1,
-			timestart = 2,
-			timeend = 2,
-			minspeed = 1,
-			maxspeed = 2,
-		})
-		posz -= 110
-	end
+-- 	posz = -33756.637
+-- 	for i = 7, 9 do
+-- 		table.insert(cars, {
+-- 			car = carfolder["car" .. i],
+-- 			startPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
+-- 			endPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
+-- 			isMoving = false,
+-- 			nextActionTime = tick() + math.random(0, 2),
+-- 			probabilities = 1,
+-- 			timestart = 2,
+-- 			timeend = 2,
+-- 			minspeed = 1,
+-- 			maxspeed = 2,
+-- 		})
+-- 		posz -= 110
+-- 	end
 
-	posz = -34094.637
-	for i = 10, 12 do
-		table.insert(cars, {
-			car = carfolder["car" .. i],
-			startPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
-			endPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
-			isMoving = false,
-			nextActionTime = tick() + math.random(0, 2),
-			probabilities = 1,
-			timestart = 2,
-			timeend = 2,
-			minspeed = 1,
-			maxspeed = 2,
-		})
-		posz -= 110
-	end
+-- 	posz = -34094.637
+-- 	for i = 10, 12 do
+-- 		table.insert(cars, {
+-- 			car = carfolder["car" .. i],
+-- 			startPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
+-- 			endPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
+-- 			isMoving = false,
+-- 			nextActionTime = tick() + math.random(0, 2),
+-- 			probabilities = 1,
+-- 			timestart = 2,
+-- 			timeend = 2,
+-- 			minspeed = 1,
+-- 			maxspeed = 2,
+-- 		})
+-- 		posz -= 110
+-- 	end
 
-	posz = -34557.637
-	for i = 13, 15 do
-		table.insert(cars, {
-			car = carfolder["car" .. i],
-			startPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
-			endPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
-			isMoving = false,
-			nextActionTime = tick() + math.random(0, 2),
-			probabilities = 1,
-			timestart = 2,
-			timeend = 2,
-			minspeed = 1,
-			maxspeed = 2,
-		})
-		posz -= 110
-	end
+-- 	posz = -34557.637
+-- 	for i = 13, 15 do
+-- 		table.insert(cars, {
+-- 			car = carfolder["car" .. i],
+-- 			startPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
+-- 			endPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(-90), 0),
+-- 			isMoving = false,
+-- 			nextActionTime = tick() + math.random(0, 2),
+-- 			probabilities = 1,
+-- 			timestart = 2,
+-- 			timeend = 2,
+-- 			minspeed = 1,
+-- 			maxspeed = 2,
+-- 		})
+-- 		posz -= 110
+-- 	end
 
-	posz = -34899.637
-	for i = 16, 18 do
-		table.insert(cars, {
-			car = carfolder["car" .. i],
-			startPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
-			endPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
-			isMoving = false,
-			nextActionTime = tick() + math.random(0, 2),
-			probabilities = 1,
-			timestart = 2,
-			timeend = 2,
-			minspeed = 1,
-			maxspeed = 2,
-		})
-		posz -= 110
-	end
-end
+-- 	posz = -34899.637
+-- 	for i = 16, 18 do
+-- 		table.insert(cars, {
+-- 			car = carfolder["car" .. i],
+-- 			startPos = CFrame.new(832.254, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
+-- 			endPos = CFrame.new(-1291.746, 2280.638, posz) * CFrame.Angles(0, math.rad(90), 0),
+-- 			isMoving = false,
+-- 			nextActionTime = tick() + math.random(0, 2),
+-- 			probabilities = 1,
+-- 			timestart = 2,
+-- 			timeend = 2,
+-- 			minspeed = 1,
+-- 			maxspeed = 2,
+-- 		})
+-- 		posz -= 110
+-- 	end
+-- end
 
-initCars()
+-- initCars()
 
--- 单个主循环管理所有车的移动
-task.spawn(function()
-	while true do
-		local currentTime = tick()
+-- -- 单个主循环管理所有车的移动
+-- task.spawn(function()
+-- 	while true do
+-- 		local currentTime = tick()
 
-		-- 遍历所有车
-		for _, carData in ipairs(cars) do
-			-- 检查是否到达行动时间
-			if currentTime >= carData.nextActionTime then
-				if not carData.isMoving then
-					-- 检查概率
-					local random = math.random()
-					if random <= carData.probabilities then
-						-- 开始新移动
-						local speed = math.random(carData.minspeed, carData.maxspeed)
+-- 		-- 遍历所有车
+-- 		for _, carData in ipairs(cars) do
+-- 			-- 检查是否到达行动时间
+-- 			if currentTime >= carData.nextActionTime then
+-- 				if not carData.isMoving then
+-- 					-- 检查概率
+-- 					local random = math.random()
+-- 					if random <= carData.probabilities then
+-- 						-- 开始新移动
+-- 						local speed = math.random(carData.minspeed, carData.maxspeed)
 
-						-- 重置到起点
-						carData.car.CFrame = carData.startPos
+-- 						-- 重置到起点
+-- 						carData.car.CFrame = carData.startPos
 
-						-- 创建并播放tween
-						local tweenInfo = TweenInfo.new(speed, Enum.EasingStyle.Linear)
-						local tween = TweenService:Create(carData.car, tweenInfo, { CFrame = carData.endPos })
-						tween:Play()
+-- 						-- 创建并播放tween
+-- 						local tweenInfo = TweenInfo.new(speed, Enum.EasingStyle.Linear)
+-- 						local tween = TweenService:Create(carData.car, tweenInfo, { CFrame = carData.endPos })
+-- 						tween:Play()
 
-						-- 记录移动状态
-						carData.isMoving = true
-						-- 移动完成后才能进行下一次行动
-						carData.nextActionTime = currentTime + speed + math.random(carData.timestart, carData.timeend)
-					else
-						-- 概率没通过，设置下次检查时间
-						carData.nextActionTime = currentTime + math.random(carData.timestart, carData.timeend)
-					end
-				else
-					-- 如果正在移动，检查是否完成
-					if currentTime >= carData.nextActionTime - math.random(carData.timestart, carData.timeend) then
-						carData.isMoving = false
-					end
-				end
-			end
-		end
+-- 						-- 记录移动状态
+-- 						carData.isMoving = true
+-- 						-- 移动完成后才能进行下一次行动
+-- 						carData.nextActionTime = currentTime + speed + math.random(carData.timestart, carData.timeend)
+-- 					else
+-- 						-- 概率没通过，设置下次检查时间
+-- 						carData.nextActionTime = currentTime + math.random(carData.timestart, carData.timeend)
+-- 					end
+-- 				else
+-- 					-- 如果正在移动，检查是否完成
+-- 					if currentTime >= carData.nextActionTime - math.random(carData.timestart, carData.timeend) then
+-- 						carData.isMoving = false
+-- 					end
+-- 				end
+-- 			end
+-- 		end
 
-		-- 短暂等待，避免过度占用CPU，同时保持响应性
-		task.wait(0.1)
-	end
-end)
+-- 		-- 短暂等待，避免过度占用CPU，同时保持响应性
+-- 		task.wait(0.1)
+-- 	end
+-- end)
