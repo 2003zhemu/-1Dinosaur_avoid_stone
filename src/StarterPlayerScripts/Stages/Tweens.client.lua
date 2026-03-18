@@ -206,15 +206,15 @@ end
 
 EventBus.ConnectS2C(function(eventName, params)
 	if eventName == EventDefines["客户端关卡动画"] then
-		pcall(Stage2Tween)
-		pcall(Stage5Tween)
-		pcall(Stage7Tween)
-		pcall(Stage11Tween)
-		pcall(Stage13Tween)
+		-- pcall(Stage2Tween)
+		-- pcall(Stage5Tween)
+		-- pcall(Stage7Tween)
+		-- pcall(Stage11Tween)
+		-- pcall(Stage13Tween)
 		--Stage17Tween()
 	end
 	if eventName == EventDefines["客户端关卡动画2"] then
-		pcall(Stage9Tween)
-		pcall(Stage21Tween)
+		-- pcall(Stage9Tween)
+		-- pcall(Stage21Tween)
 	end
 end)
